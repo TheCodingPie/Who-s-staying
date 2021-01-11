@@ -1,0 +1,7 @@
+  for i in allAttributeValues:
+            t1=table[table[highestGainAttribute[0]]!=i]
+            t2=t1.drop(columns=highestGainAttribute[0])
+            child=id3Algorithm(t2,className,node)
+            print(child.name)
+            me.addChildAndBranch(child,i)
+        return me
